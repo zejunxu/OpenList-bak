@@ -10,12 +10,6 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
-      - name: 修复 pip 缓存权限
-        run: |
-          mkdir -p /github/home/.cache/pip
-          chmod -R 775 /github/home/.cache/pip
-        env:
-          LANG: zh_CN.UTF-8
       - uses: Yikun/hub-mirror-action@master
         with:
           src: github/zejunxu
